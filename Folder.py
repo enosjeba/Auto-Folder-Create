@@ -28,8 +28,6 @@ if number_of_folders > 0:
 else:
     print("Check inputs")
     
-
-
 for i in folder_names:
     os.mkdir(f'./{i}/')
     print(f'created folder {i}')
