@@ -13,7 +13,6 @@ folder_names = []
 # def create_folder(folder_name, number):
 #     os.makedirs(f'./{folder_name}/')
 
-
 if number_of_folders > 0:
     os.mkdir(f'./{project_name}/')
     os.chdir(f'./{project_name}')
@@ -27,9 +26,7 @@ if number_of_folders > 0:
             break
 else:
     print("Check inputs")
-    
+
 for i in folder_names:
     os.mkdir(f'./{i}/')
     print(f'created folder {i}')
-
-
