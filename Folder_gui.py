@@ -13,7 +13,7 @@ project_name_inp.pack()
 
 #Entry 
 number_of_folders = Entry(root)
-number_of_folders.insert(0,"1")
+number_of_folders.insert(0,"Enter your ")
 number_of_folders.pack()
 
 folder_names = []
