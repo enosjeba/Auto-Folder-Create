@@ -23,6 +23,7 @@ if number_of_folders > 0:
         folder_names.append(data)
         if len(folder_names) == number_of_folders:
             print("Number of Folders : ", len(folder_names))
+            print(folder_names)
             break
 else:
     print("Check inputs")
