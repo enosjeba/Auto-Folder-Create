@@ -12,17 +12,17 @@ project_name_inp.insert(0,"Enter Project Name")
 project_name_inp.pack()
 
 #Entry 
-number_of_folders = Entry(root)
-number_of_folders.insert(0,"Enter your ")
-number_of_folders.pack()
+num = Entry(root)
+num.insert(0,text="Enter number of folders")
+num.pack()
 
 folder_names = []
 
-def project_name():
-    project_name = project_name_inp.get()
-    return
+def number_of_folders():
+    a = int(num.get())
+    return a
 
-if number_of_folders.get() > 0:
+if a >= 0:
     os.mkdir(f'./{project_name_inp.get()}/')
     os.chdir(f'./{project_name_inp.get()}')
     print(f'You are in {project_name_inp} folder')
