@@ -21,7 +21,7 @@ def inputs():
     project_name_prnt = Label(root, text=project_name+ " created")
     project_name_prnt.pack()
 
-#Button 
+#Button
 # Additional Options
 # command=function
 btn_create = Button(root, text="Create Project", command=inputs)
