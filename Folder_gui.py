@@ -18,6 +18,10 @@ number_of_folders.pack()
 
 folder_names = []
 
+def project_name():
+    project_name = project_name_inp.get()
+    return
+
 if number_of_folders.get() > 0:
     os.mkdir(f'./{project_name_inp.get()}/')
     os.chdir(f'./{project_name_inp.get()}')
