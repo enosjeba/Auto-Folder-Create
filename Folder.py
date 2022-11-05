@@ -1,5 +1,8 @@
 import os
 
+project_name = str(input('Project Name :'))
+number_of_folders = int(input('Enter Number of Folders you want :'))
+folder_names = []
 
 # def project_folder(project_name):
 #     os.mkdir(f'./{project_name}/')
