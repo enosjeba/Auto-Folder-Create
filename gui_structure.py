@@ -30,4 +30,24 @@ btn_create = Button(root, text="Create Project", command=inputs)
 btn_create.pack()
 
 
+
+#Button
+# Additional Options
+# command=function
+btn_create = Button(root, text="Create Project", command=inputs)
+btn_create.pack()
+#Button
+# Additional Options
+# command=function
+btn_create = Button(root, text="Create Project", command=inputs)
+btn_create.pack()
+#Button
+# Additional Options
+# command=function
+btn_create = Button(root, text="Create Project", command=inputs)
+btn_create.pack()
+
+
+
+
 root.mainloop()
