@@ -2,8 +2,11 @@ from tkinter import *
 import os
 
 root = Tk()
-
 title = Label(root, text="Folder Bag")
+title.pack()
+
+folder_num = Toplevel()
+title = Label(folder_num, text="Folder Names")
 title.pack()
 
 #Project Name
@@ -11,7 +14,11 @@ project_name = Entry(root)
 project_name.insert(0,"Enter Project Name")
 project_name.pack()
 
-number_of_folders = int(input('Enter Number of Folders you want :'))
+#Number of Folders
+number_of_folders = Entry(folder_num)
+number_of_folders.insert(0,"Enter Number of Folders")
+number_of_folders.pack()
+
 folder_names = []
 
 # def project_folder(project_name):
