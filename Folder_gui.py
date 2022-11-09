@@ -6,27 +6,28 @@ root = Tk()
 title = Label(root, text="Folder Bag")
 title.pack()
 
-#Entry
-project_name_inp = Entry(root)
-project_name_inp.insert(0,"Enter Project Name")
-project_name_inp.pack()
+#Project Name
+project_name = Entry(root)
+project_name.insert(0,"Enter Project Name")
+project_name.pack()
 
-#Entry 
-num = Entry(root)
-num.insert(0,text="Enter number of folders")
-num.pack()
-
+number_of_folders = int(input('Enter Number of Folders you want :'))
 folder_names = []
 
-def number_of_folders():
-    a = int(num.get())
-    return a
+# def project_folder(project_name):
+#     os.mkdir(f'./{project_name}/')
+#     os.chdir(f'./{project_name}/')
 
-if a >= 0:
-    os.mkdir(f'./{project_name_inp.get()}/')
-    os.chdir(f'./{project_name_inp.get()}')
-    print(f'You are in {project_name_inp} folder')
-    while True:
+#change working directory to project folder
+
+# def create_folder(folder_name, number):
+#     os.makedirs(f'./{folder_name}/')
+
+if number_of_folders > 0:
+    os.mkdir(f'./{project_name}/')
+    os.chdir(f'./{project_name}')
+    print(f'You are in {project_name} folder')
+    while True:  
         a = len(folder_names)+1
         data = input(f'Enter Sub-Folder {a} Name ')
         folder_names.append(data)
@@ -40,5 +41,3 @@ else:
 for i in folder_names:
     os.mkdir(f'./{i}/')
     print(f'created folder {i}')
-
-root.mainloop()
