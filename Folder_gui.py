@@ -6,6 +6,10 @@ root = Tk()
 title = Label(root, text="Folder Bag")
 title.pack()
 
+#Entry
+project_name_inp = Entry(root)
+project_name_inp.insert(0,"Enter Project Name")
+project_name_inp.pack()
 
 #Entry 
 number_of_folders = Entry(root)
