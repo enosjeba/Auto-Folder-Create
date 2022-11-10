@@ -16,8 +16,6 @@ number_of_folders = Entry(root)
 number_of_folders.insert(0,"Enter your ")
 number_of_folders.pack()
 
-folder_names = []
-
 def project_name():
     project_name = project_name_inp.get()
     return
