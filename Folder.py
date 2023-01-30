@@ -1,8 +1,11 @@
 import os
 
-project_name = str(input('Project Name :'))
 number_of_folders = int(input('Enter Number of Folders you want :'))
 folder_names = []
+
+def ProjectName():
+    project_name = str(input('Project Name :'))
+    return project_name
 
 # def project_folder(project_name):
 #     os.mkdir(f'./{project_name}/')
@@ -13,7 +16,7 @@ folder_names = []
 # def create_folder(folder_name, number):
 #     os.makedirs(f'./{folder_name}/')
 
-def FolderNames(number_of_folders):
+def FolderNames(number_of_folders, project_name):
     if number_of_folders > 0:
         os.mkdir(f'./{project_name}/')
         os.chdir(f'./{project_name}')
