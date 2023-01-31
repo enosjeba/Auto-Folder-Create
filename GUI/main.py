@@ -1,5 +1,4 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-import Folder
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -20,14 +19,14 @@ class Ui_MainWindow(object):
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit.setGeometry(QtCore.QRect(20, 50, 361, 41))
         self.lineEdit.setObjectName("lineEdit")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: Folder.ProjectName(self.lineEdit.setText()))
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.ProjectNameSubmit())
         self.pushButton.setGeometry(QtCore.QRect(140, 110, 121, 41))
         self.pushButton.setObjectName("pushButton")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 402, 26))
         self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
+        MainWindow.setMenuBar(self.menubar) 
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
@@ -35,11 +34,15 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+    def ProjectNameSubmit():
+        pass
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "Enter your Project Name"))
         self.pushButton.setText(_translate("MainWindow", "Create Project"))
+
 
 
 if __name__ == "__main__":
