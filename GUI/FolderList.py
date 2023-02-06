@@ -1,7 +1,6 @@
 import os
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
 class Ui_FolderName(object):
     def setupUi(self, FolderName):
         FolderName.setObjectName("FolderName")
