@@ -2,7 +2,7 @@ import os
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_FolderName(object):
-    def setupUi(self, FolderName):
+    def setupUi(self, FolderName):  
         FolderName.setObjectName("FolderName")
         FolderName.resize(372, 516)
         self.centralwidget = QtWidgets.QWidget(FolderName)
@@ -82,10 +82,9 @@ class Ui_FolderName(object):
             os.mkdir(f'./{Fname}/')
             print(f'created folder {Fname}')
 
-
     def retranslateUi(self, FolderName):
         _translate = QtCore.QCoreApplication.translate
-        FolderName.setWindowTitle(_translate("FolderName", "Add Folder's to Project"))
+        FolderName.setWindowTitle(_translate("FolderName", "Add Folder's to"))
         self.Clear_pushButton.setText(_translate("FolderName", "Clear List"))
         self.DeleteFolder_pushButton_2.setText(_translate("FolderName", "Delete Folder"))
         self.AddFolder_pushButton_3.setText(_translate("FolderName", "Add Folder"))

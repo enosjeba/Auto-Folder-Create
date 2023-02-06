@@ -1,6 +1,22 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+from FolderList import Ui_FolderName
 
 class Ui_MainWindow(object):
+    def OpenWindow(self):
+        #open second window
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_FolderName()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
+    def ProjectNameSubmit(self):
+        name = self.lineEdit.text()
+
+        # self.ui.setupUi(name)
+
+        #send project name to folder list window
+        # self.ui.FolderName.setText(name)
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(402, 207)
@@ -34,8 +50,6 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    def ProjectNameSubmit():
-        pass
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
