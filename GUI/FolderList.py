@@ -1,4 +1,4 @@
-
+import os
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -26,7 +26,7 @@ class Ui_FolderName(object):
         self.FolderList_listWidget = QtWidgets.QListWidget(self.centralwidget)
         self.FolderList_listWidget.setGeometry(QtCore.QRect(10, 130, 351, 280))
         self.FolderList_listWidget.setObjectName("FolderList_listWidget")
-        self.submit_pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.submit_pushButton = QtWidgets.QPushButton(self.centralwidget, clicked = lambda: self.createFolder())
         self.submit_pushButton.setGeometry(QtCore.QRect(10, 420, 351, 41))
         self.submit_pushButton.setObjectName("submit_pushButton")
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -68,6 +68,21 @@ class Ui_FolderName(object):
         
         #Delete Selected Row
         self.FolderList_listWidget.takeItem(clicked)
+
+    def createFolder(self):
+
+        #List for folder names
+        folder_list = []
+
+        #loop throught list widget and add items
+        for index in range(self.FolderList_listWidget.count()):
+            folder_list.append(self.FolderList_listWidget.item(index))
+        
+        for item in folder_list:
+            Fname = item.text()
+            os.mkdir(f'./{Fname}/')
+            print(f'created folder {Fname}')
+
 
     def retranslateUi(self, FolderName):
         _translate = QtCore.QCoreApplication.translate
