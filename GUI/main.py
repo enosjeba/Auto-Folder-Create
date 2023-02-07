@@ -1,21 +1,22 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from FolderList import Ui_FolderName
+import os
+
 
 class Ui_MainWindow(object):
     def OpenWindow(self):
+        
+        #Create Folder
+        name = self.lineEdit.text()
+        os.mkdir(f'./{name}/')
+        os.chdir(f'./{name}')
+
         #open second window
         self.window = QtWidgets.QMainWindow()
         self.ui = Ui_FolderName()
         self.ui.setupUi(self.window)
         self.window.show()
-
-    def ProjectNameSubmit(self):
-        name = self.lineEdit.text()
-
-        # self.ui.setupUi(name)
-
-        #send project name to folder list window
-        # self.ui.FolderName.setText(name)
+        MainWindow.hide()
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -35,7 +36,7 @@ class Ui_MainWindow(object):
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit.setGeometry(QtCore.QRect(20, 50, 361, 41))
         self.lineEdit.setObjectName("lineEdit")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.ProjectNameSubmit())
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.OpenWindow())
         self.pushButton.setGeometry(QtCore.QRect(140, 110, 121, 41))
         self.pushButton.setObjectName("pushButton")
         MainWindow.setCentralWidget(self.centralwidget)
