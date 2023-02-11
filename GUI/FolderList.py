@@ -70,6 +70,11 @@ class Ui_FolderName(object):
         #Delete Selected Row
         self.FolderList_listWidget.takeItem(clicked)
 
+    def ListChecker(folder_list_final):
+        folder_list_final = list(filter(None,folder_list_final))
+        
+        return folder_list_final
+
     def createFolder(self, second_w):
 
         #List for folder names pyqt format
@@ -83,8 +88,8 @@ class Ui_FolderName(object):
         for item in folder_list:
             Fname = item.text()
             folder_list_final.append(Fname)
-            folder_list_final = list(filter(None,folder_list_final))
-            print(folder_list_final)
+            FList = (folder_list_final)
+            print(FList , "after")
             # os.mkdir(f'./{Fname}/')
             # print(f'created folder {Fname}')
 
