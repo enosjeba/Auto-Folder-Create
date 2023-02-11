@@ -83,6 +83,8 @@ class Ui_FolderName(object):
         for item in folder_list:
             Fname = item.text()
             folder_list_final.append(Fname)
+            folder_list_final = list(filter(None,folder_list_final))
+            print(folder_list_final)
             # os.mkdir(f'./{Fname}/')
             # print(f'created folder {Fname}')
 
