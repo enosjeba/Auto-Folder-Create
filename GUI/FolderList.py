@@ -72,8 +72,9 @@ class Ui_FolderName(object):
 
     def createFolder(self, second_w):
 
-        #List for folder names
+        #List for folder names pyqt format
         folder_list = []
+        folder_list_final = []
 
         #loop throught list widget and add items
         for index in range(self.FolderList_listWidget.count()):
@@ -81,8 +82,9 @@ class Ui_FolderName(object):
         
         for item in folder_list:
             Fname = item.text()
-            os.mkdir(f'./{Fname}/')
-            print(f'created folder {Fname}')
+            folder_list_final.append(Fname)
+            # os.mkdir(f'./{Fname}/')
+            # print(f'created folder {Fname}')
 
         second_w.close()
         
