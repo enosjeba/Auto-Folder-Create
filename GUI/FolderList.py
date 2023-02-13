@@ -1,17 +1,21 @@
 import os
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QRegExp
+from PyQt5 import QRegExpValidator
 
 
 class Ui_FolderName(object):
 
     def setupUi(self, FolderName):
-        FolderName.setObjectName("FolderName")
+        validator = QRegExpValidator(QRegExp(r'[a-z]+[A-Z]'))
+        FolderName.setObjectName("FolderName")  
         FolderName.resize(372, 516)
         self.centralwidget = QtWidgets.QWidget(FolderName)
         self.centralwidget.setObjectName("centralwidget")
         self.Foldername_lineEdit = QtWidgets.QLineEdit(self.centralwidget)
         self.Foldername_lineEdit.setGeometry(QtCore.QRect(10, 30, 351, 40))
         self.Foldername_lineEdit.setObjectName("Foldername_lineEdit")
+        self.Foldername_lineEdit.setValidator(validator)
         self.Clear_pushButton = QtWidgets.QPushButton(self.centralwidget, clicked = lambda: self.clearlist())
         self.Clear_pushButton.setGeometry(QtCore.QRect(250, 80, 111, 41))
         self.Clear_pushButton.setObjectName("Clear_pushButton")
