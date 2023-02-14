@@ -1,15 +1,18 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from FolderList import Ui_FolderName
+from PyQt5.QtCore import QRegExp
+from PyQt5.QtGui import QRegExpValidator
 import os
-
 
 class Ui_MainWindow(object):
     def OpenWindow(self):
         
         #Create Folder
         name = self.lineEdit.text()
-        os.mkdir(f'./{name}/')
-        os.chdir(f'./{name}')
+        #If input is empty
+        if name != "":
+            os.mkdir(f'./{name}/')
+            os.chdir(f'./{name}')
 
         #open second window
         self.window = QtWidgets.QMainWindow()

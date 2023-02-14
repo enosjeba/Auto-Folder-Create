@@ -1,8 +1,7 @@
 import os
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5 import QRegExp
-from PyQt5 import QRegExpValidator
-
+from PyQt5.QtCore import QRegExp
+from PyQt5.QtGui import QRegExpValidator
 
 class Ui_FolderName(object):
 
@@ -58,8 +57,10 @@ class Ui_FolderName(object):
         #Grab item
         item = self.Foldername_lineEdit.text()
 
-        #Add item to List
-        self.FolderList_listWidget.addItem(item)
+        #If input is empty
+        if item != "":
+            #Add item to List
+            self.FolderList_listWidget.addItem(item)
 
         #clear item
         self.Foldername_lineEdit.setText("")
@@ -92,10 +93,8 @@ class Ui_FolderName(object):
         for item in folder_list:
             Fname = item.text()
             folder_list_final.append(Fname)
-            FList = (folder_list_final)
-            print(FList , "after")
-            # os.mkdir(f'./{Fname}/')
-            # print(f'created folder {Fname}')
+            os.mkdir(f'./{Fname}/')
+            print(f'created folder {Fname}')
 
         second_w.close()
         
