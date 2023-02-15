@@ -6,7 +6,7 @@ from PyQt5.QtGui import QRegExpValidator
 class Ui_FolderName(object):
 
     def setupUi(self, FolderName):
-        validator = QRegExpValidator(QRegExp(r'[a-z]+[A-Z]'))
+        validator = QRegExpValidator(QRegExp(r'^[a-zA-Z]*$'))
         FolderName.setObjectName("FolderName")  
         FolderName.resize(372, 516)
         self.centralwidget = QtWidgets.QWidget(FolderName)

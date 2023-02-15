@@ -22,6 +22,7 @@ class Ui_MainWindow(object):
         MainWindow.hide()
 
     def setupUi(self, MainWindow):
+        validator = QRegExpValidator(QRegExp(r'^[a-zA-Z]*$'))
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(402, 207)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -38,6 +39,7 @@ class Ui_MainWindow(object):
         self.label.setObjectName("label")
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit.setGeometry(QtCore.QRect(20, 50, 361, 41))
+        self.lineEdit.setValidator(validator)
         self.lineEdit.setObjectName("lineEdit")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget, clicked=lambda: self.OpenWindow())
         self.pushButton.setGeometry(QtCore.QRect(140, 110, 121, 41))
