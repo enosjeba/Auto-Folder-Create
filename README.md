@@ -9,5 +9,3 @@ Every time we try to start off with a idea from our mind, We generally go throug
 ### How to use?
 Copy the exe file to the desired location to create folders. Double click exe file and you will know the rest. I am also working on making it more easily accesible!
 
-### What has happened ?
-For now I have been able to just make the basic app which can get you started by creating folders in simple clicks. In future I am planning to include Folder Templates so you can keep your own set of folder names on the shelf and activate it in lesser time.
